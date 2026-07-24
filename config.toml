@@ -1,0 +1,12 @@
+base_url = "https://punksystems.org"
+title = "Punk Systems"
+description = "Zero-knowledge tools that leave no permanent record of who you are, what you buy, what you read, or where you connect."
+compile_sass = true
+minify_html = true
+generate_feeds = false
+build_search_index = false
+
+[extra]
+accent_color = "#00ff88"
+bg_color = "#0a0a0a"
+signal_link = "https://signal.me/#example"
