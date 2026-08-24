@@ -6,5 +6,3 @@ minify_html = true
 generate_feeds = false
 build_search_index = false
 
-[extra]
-signal_link = "https://signal.me/#example"

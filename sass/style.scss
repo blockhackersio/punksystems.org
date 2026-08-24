@@ -35,8 +35,8 @@ body {
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-left: 1px solid #888888;
+  border-right: 1px solid #888888;
   min-height: 100vh;
 }
 
@@ -60,9 +60,15 @@ body {
   padding: 1rem 2rem;
   background: rgba(10, 10, 10, 0.9);
   backdrop-filter: blur(10px);
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-left: 1px solid #888888;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+  transition: height 0.3s ease;
+}
+
+.nav.scrolled {
+  height: 100px;
+  padding: 0.5rem 2rem;
 }
 
 .nav-logo {
@@ -80,12 +86,18 @@ body {
   flex-direction: column;
   line-height: 1.1;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.6em;
+  margin-left: 0.5rem;
 }
 
 .nav-icon {
   height: 100px;
   width: auto;
+  transition: height 0.3s ease;
+}
+
+.nav.scrolled .nav-icon {
+  height: 35px;
 }
 
 .nav-links {
@@ -109,7 +121,7 @@ body {
   display: flex;
   align-items: center;
   padding: 13rem 0 0rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #888888;
 }
 
 .section-title {
@@ -117,7 +129,7 @@ body {
   font-weight: 700;
   color: var(--accent);
   margin-bottom: var(--spacing);
-  border-bottom: 1px dashed #fff;
+  border-bottom: 1px dashed #888888;
   padding: 1rem 32px;
 
   text-transform: uppercase;
@@ -194,14 +206,18 @@ body {
 .product-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1.5rem;
+  gap: 0;
   padding-bottom: 1.5rem;
 }
 
 .product-card {
   padding: 32px;
   text-align:center;
-  border-right: 1px solid white;
+  border-right: 1px solid #888888;
+}
+
+.product-card:last-child {
+  border-right: none;
 }
 
 .product-name {
@@ -217,67 +233,24 @@ body {
   color: var(--fg);
 }
 
+.about {
+  padding: 0;
+}
+
+.about .container {
+  padding: 0;
+}
+
+.about-content {
+  padding: 0 32px;
+}
+
 .about p {
   margin-bottom: 1rem;
 }
 
 .contact {
   margin-top: 2rem;
-}
-
-.challenge-box {
-  margin-top: 1.5rem;
-}
-
-.challenge-question {
-  margin-bottom: 0.75rem;
-  font-size: 0.9rem;
-}
-
-.challenge-input-row {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.challenge-input {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  color: var(--fg);
-  font-family: var(--font);
-  font-size: 0.9rem;
-  padding: 0.75rem 1rem;
-  width: 5rem;
-  text-align: center;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.challenge-input:focus {
-  border-color: var(--accent);
-}
-
-.btn-sm {
-  padding: 0.75rem 1.25rem;
-  font-size: 0.8rem;
-}
-
-.challenge-error {
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
-  color: #888888;
-}
-
-.qrcode-container {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-}
-
-.qrcode-container canvas {
-  display: block;
 }
 
 .footer {
@@ -297,7 +270,11 @@ body {
   padding: 0;
 }
 .nav-links{
-  margin-top: 18px; // align with logo copy
+  margin-top: 18px;
+}
+
+.nav.scrolled .nav-links {
+  margin-top: 0;
 }
 
 @media (max-width: 640px) {
