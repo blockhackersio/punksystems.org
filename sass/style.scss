@@ -10,7 +10,7 @@
   --bg: #0a0a0a;
   --bg-alt: #111111;
   --fg: #e0e0e0;
-  --fg-dim: #888888;
+  --fg-dim: #c8a200;
   --accent: #ffffff;
   --accent-dim: #cccccc;
   --border: #1a1a1a;
@@ -26,7 +26,13 @@ html {
 
 body {
   font-family: var(--font);
-  background: var(--bg);
+  background: repeating-linear-gradient(
+    45deg,
+    #c8a200 0px,
+    #c8a200 15px,
+    #0a0a0a 15px,
+    #0a0a0a 30px
+  );
   color: var(--fg);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -35,8 +41,9 @@ body {
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  border-left: 1px solid #888888;
-  border-right: 1px solid #888888;
+  background: var(--bg);
+  border-left: 1px solid #3c3c30;
+  border-right: 1px solid #3c3c30;
   min-height: 100vh;
 }
 
@@ -60,9 +67,9 @@ body {
   padding: 1rem 2rem;
   background: rgba(10, 10, 10, 0.9);
   backdrop-filter: blur(10px);
-  border-left: 1px solid #888888;
-  border-right: 1px solid #888888;
-  border-bottom: 1px solid #888888;
+  border-left: 1px solid #3c3c30;
+  border-right: 1px solid #3c3c30;
+  border-bottom: 1px solid #3c3c30;
   transition: height 0.3s ease;
 }
 
@@ -121,7 +128,7 @@ body {
   display: flex;
   align-items: center;
   padding: 13rem 0 0rem;
-  border-bottom: 1px solid #888888;
+  border-bottom: 1px solid #3c3c30;
 }
 
 .section-title {
@@ -129,7 +136,7 @@ body {
   font-weight: 700;
   color: var(--accent);
   margin-bottom: var(--spacing);
-  border-bottom: 1px dashed #888888;
+  border-bottom: 1px dashed #3c3c30;
   padding: 1rem 32px;
 
   text-transform: uppercase;
@@ -154,6 +161,10 @@ body {
   flex: 2;
 }
 
+.hl {
+  color: #c8a200;
+}
+
 .hero-right {
   flex: 3;
 }
@@ -176,9 +187,8 @@ body {
 .hero-statement {
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--accent-dim);
-  border-left: 3px solid var(--accent);
-  padding-left: 1.5rem;
+  color: #c8a200;
+  text-transform: uppercase;
   margin-bottom: 2.5rem;
   max-width: 650px;
 }
@@ -213,7 +223,7 @@ body {
 .product-card {
   padding: 32px;
   text-align:center;
-  border-right: 1px solid #888888;
+  border-right: 1px solid #3c3c30;
 }
 
 .product-card:last-child {
