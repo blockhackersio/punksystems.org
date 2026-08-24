@@ -14,7 +14,7 @@
   --accent: #ffffff;
   --accent-dim: #cccccc;
   --border: #1a1a1a;
-  --font: 'Lexend', sans-serif;
+  --font: 'Iosevka Charon Mono', monospace;
   --max-width: 800px;
   --spacing: 2rem;
 }
@@ -27,7 +27,7 @@ html {
 body {
   font-family: var(--font);
   background-color: #0a0a0a;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cline x1='14' y1='14' x2='18' y2='18' stroke='%23c8a200' stroke-width='1'/%3E%3Cline x1='18' y1='14' x2='14' y2='18' stroke='%23c8a200' stroke-width='1'/%3E%3Cline x1='44' y1='44' x2='48' y2='48' stroke='%23c8a200' stroke-width='1'/%3E%3Cline x1='48' y1='44' x2='44' y2='48' stroke='%23c8a200' stroke-width='1'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cline x1='9' y1='9' x2='13' y2='13' stroke='%23c8a200' stroke-width='1'/%3E%3Cline x1='13' y1='9' x2='9' y2='13' stroke='%23c8a200' stroke-width='1'/%3E%3Cline x1='29' y1='29' x2='33' y2='33' stroke='%23c8a200' stroke-width='1'/%3E%3Cline x1='33' y1='29' x2='29' y2='33' stroke='%23c8a200' stroke-width='1'/%3E%3C/svg%3E");
   color: var(--fg);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -90,6 +90,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.6em;
   margin-left: 0.5rem;
+  font-family: 'Lexend', sans-serif;
 }
 
 .nav-icon {
@@ -133,9 +134,9 @@ body {
   margin-bottom: var(--spacing);
   border-bottom: 1px dashed #3c3c30;
   padding: 1rem 32px;
-
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  font-family: 'Lexend', sans-serif;
 }
 
 .hero {
