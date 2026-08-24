@@ -28,6 +28,7 @@ body {
   font-family: var(--font);
   background-color: #0a0a0a;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cline x1='9' y1='9' x2='13' y2='13' stroke='%23c8a200' stroke-opacity='0.5' stroke-width='1'/%3E%3Cline x1='13' y1='9' x2='9' y2='13' stroke='%23c8a200' stroke-opacity='0.5' stroke-width='1'/%3E%3Cline x1='29' y1='29' x2='33' y2='33' stroke='%23c8a200' stroke-opacity='0.5' stroke-width='1'/%3E%3Cline x1='33' y1='29' x2='29' y2='33' stroke='%23c8a200' stroke-opacity='0.5' stroke-width='1'/%3E%3C/svg%3E");
+  background-attachment: fixed;
   color: var(--fg);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
