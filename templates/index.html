@@ -7,38 +7,44 @@
   <title>{{ config.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
 </head>
 <body>
   <nav class="nav">
-    <a href="#hero" class="nav-logo">Punk Systems</a>
+    <a href="#hero" class="nav-logo"><img src="/punksystems_white.svg" alt="Punk Systems" class="nav-icon"><span class="nav-logo-text"><span>Punk</span><span>Systems</span></span></a>
     <div class="nav-links">
-      <a href="#products">Products</a>
       <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
     </div>
   </nav>
-
+  <div class="wrapper">
   <main>
     <section id="hero" class="section hero">
-      <div class="container">
-        <h1 class="hero-title">Punk Systems</h1>
-        <p class="hero-mission">
-          Every digital interaction — payments, logins, browsing, connectivity — all leave a permanent record.
-          This data is retained, sold and repurposed without consent. Big tech and governments work together to
-          control narratives and build a surveillance state where personal freedom and free political thought are
-          captured and controlled by plutocracy. Democracy in darkness becomes dictatorship.
-        </p>
-        <p class="hero-mission">
-          Privacy-preserving cryptography solves this, but the tools don't reach the individuals who need them.
-          Digital privacy protection is our only solution.
-        </p>
-        <blockquote class="hero-statement">
-          Make privacy the default across the digital stack by building zero-knowledge tools that leave no permanent
-          record of who you are, what you buy, what you read, or where you connect.
-        </blockquote>
-        <a href="#products" class="btn">Explore Products</a>
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h2 class="hero-heading">Your Data.</h2>
+          <h2 class="hero-heading">Your Freedom.</h2>
+          <h2 class="hero-heading">Your Privacy.</h2>
+        </div>
+        <div class="hero-right">
+          <p class="hero-mission">
+            Every digital interaction — payments, logins, browsing, connectivity — all leave a permanent record.
+            This data is retained, sold and repurposed without consent. Big tech and governments work together to
+            control narratives and build a surveillance state where personal freedom and free political thought are
+            captured and controlled by plutocracy. Democracy in darkness becomes dictatorship.
+          </p>
+          <p class="hero-mission">
+            Privacy-preserving cryptography solves this, but the tools don't reach the individuals who need them.
+            Digital privacy protection is our only solution.
+          </p>
+          <blockquote class="hero-statement">
+            Make privacy the default across the digital stack by building zero-knowledge tools that leave no permanent
+            record of who you are, what you buy, what you read, or where you connect.
+          </blockquote>
+        </div>
       </div>
     </section>
 
@@ -47,32 +53,33 @@
         <h2 class="section-title">Products</h2>
         <div class="product-grid">
           <div class="product-card">
-            <h3 class="product-name">paypunk.sh</h3>
+            <img src="/punkreport_white.svg"/>
+            <h3 class="product-name">The Punk RepoRt</h3>
             <p class="product-desc">
-              Zero-knowledge payments infrastructure. Pay and be paid with privacy-preserving cryptocurrency
-              that leaves no identifiable transaction information, whilst integrating with accounting tools
-              such as Xero and FreshBooks for business compliance.
+            Zero-knowledge news. Privacy and technology news without tracking or data collection.
             </p>
           </div>
           <div class="product-card">
-            <h3 class="product-name">authpunk.sh</h3>
+            <img src="/paypunk_white.svg"/>
+            <h3 class="product-name">Paypunk</h3>
             <p class="product-desc">
-              Zero-knowledge identity provider. Like "sign in with Google" but we have no knowledge of
-              anything about you and neither does the service you are using.
+              Zero-knowledge payments infrastructure. Xero and FreshBooks for business compliance.
             </p>
           </div>
           <div class="product-card">
-            <h3 class="product-name">punkreport.sh</h3>
+            <img src="/authpunk_white.svg"/>
+            <h3 class="product-name">Authpunk</h3>
             <p class="product-desc">
-              Zero-knowledge news. Privacy and technology news without tracking or data collection.
+              Zero-knowledge identity provider. We have no knowledge of
+              anything about you and neither does your service.
             </p>
           </div>
           <div class="product-card">
-            <h3 class="product-name">vpunk.sh</h3>
+            <img src="/vpunk_white.svg"/>
+            <h3 class="product-name">VPuNk</h3>
             <p class="product-desc">
               Zero-knowledge VPN. Authenticate with authpunk. Pay with paypunk. No logs. No email.
-              No financial trail. Regularly rotated RAM disk servers. Dual-hop onion-routed system
-              with volunteer-run exit nodes.
+              No financial trail. 
             </p>
           </div>
         </div>
@@ -105,6 +112,7 @@
       <p>&copy; 2026 Punk Systems. No tracking. No data collection.</p>
     </div>
   </footer>
+  </div>
 
   <script>
     let a, b, qr;
@@ -130,8 +138,8 @@
             text: '{{ config.extra.signal_link }}',
             width: 256,
             height: 256,
-            colorDark: '#00ff88',
-            colorLight: '#0a0a0a',
+            colorDark: '#000000',
+            colorLight: '#ffffff',
           });
         }
       } else {

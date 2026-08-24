@@ -7,6 +7,4 @@ generate_feeds = false
 build_search_index = false
 
 [extra]
-accent_color = "#00ff88"
-bg_color = "#0a0a0a"
 signal_link = "https://signal.me/#example"
