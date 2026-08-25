@@ -41,6 +41,8 @@ body {
   border-left: 1px solid #3c3c30;
   border-right: 1px solid #3c3c30;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -103,6 +105,15 @@ body {
   align-items: center;
   justify-content: center;
   width: 20px;
+}
+
+.logo-letter.cursor {
+  animation: blink 1s step-end infinite;
+  color: #c8a200;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .nav-icon {
