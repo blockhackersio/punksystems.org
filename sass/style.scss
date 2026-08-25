@@ -319,7 +319,31 @@ body {
   font-size: 1rem;
   font-weight: 700;
   color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.product-status {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c8a200;
   margin-bottom: 0.75rem;
+}
+
+.product-link {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c8a200;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.product-link:hover {
+  text-decoration: underline;
 }
 
 .product-desc {
@@ -378,7 +402,7 @@ body {
   }
 
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .nav .nav-icon {
