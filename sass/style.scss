@@ -405,6 +405,10 @@ body {
   min-height: auto;
 }
 
+.product-card.faded {
+  opacity: 0.5;
+}
+
 .products .container {
   padding: 0;
 }
