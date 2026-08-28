@@ -369,12 +369,18 @@ body {
 }
 
 .contact {
-  padding: 4rem 0;
-  text-align: center;
+  padding: 0;
+  min-height: auto;
+  text-align: left;
+}
+
+.contact .container {
+  padding: 0;
 }
 
 .contact-content {
-  padding: 0 32px;
+  padding: 0 0 2rem;
+  text-align:center;
 }
 
 .contact-content p {
