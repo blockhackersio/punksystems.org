@@ -369,7 +369,21 @@ body {
 }
 
 .contact {
-  margin-top: 2rem;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contact-content {
+  padding: 0 32px;
+}
+
+.contact-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.signal-btn {
+  margin-top: 0.5rem;
 }
 
 .footer {
