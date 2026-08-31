@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for entry in entries %}
+    {%- if not entry.extra.sitemap_exclude %}
+    <url>
+      <loc>{{ entry.permalink | escape_xml | safe }}</loc>
+    </url>
+    {%- endif %}
+  {%- endfor %}
+</urlset>

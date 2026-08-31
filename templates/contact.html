@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rudi Yardley - Software Engineer & Web3 Lead">
+  <title>Rudi Yardley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="{{ get_url(path='bg_anim.js', cachebust=true) }}" defer></script>
+  <style>
+    .contact-page {
+      padding: 12rem 0 4rem;
+      min-height: 100vh;
+    }
+    .contact-card {
+      background: var(--bg-alt);
+      border: 1px solid #3c3c30;
+      padding: 3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-name {
+      font-family: 'Lexend', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .contact-title {
+      color: #c8a200;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 2rem;
+    }
+    .contact-bio {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--fg);
+      margin-bottom: 2.5rem;
+    }
+    .contact-section-title {
+      font-family: 'Lexend', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      border-bottom: 1px dashed #3c3c30;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .project-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2.5rem;
+    }
+    .project-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .project-item:last-child {
+      border-bottom: none;
+    }
+    .project-name {
+      font-family: 'Lexend', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--fg);
+      line-height: 1.6;
+      margin-bottom: 0.25rem;
+    }
+    .project-link {
+      font-size: 0.75rem;
+      color: #c8a200;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .project-link:hover {
+      text-decoration: underline;
+    }
+    .contact-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .contact-btn {
+      display: block;
+      text-align: center;
+      padding: 0.85rem 1.5rem;
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .contact-btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .contact-btn.signal {
+      border-color: #3a76f0;
+      color: #3a76f0;
+    }
+    .contact-btn.signal:hover {
+      background: #3a76f0;
+      color: #fff;
+    }
+    .contact-btn.discord {
+      border-color: #5865f2;
+      color: #5865f2;
+    }
+    .contact-btn.discord:hover {
+      background: #5865f2;
+      color: #fff;
+    }
+    .contact-btn.x {
+      border-color: var(--fg-dim);
+      color: var(--fg-dim);
+    }
+    .contact-btn.x:hover {
+      background: var(--fg-dim);
+      color: var(--bg);
+    }
+    .contact-btn.gh {
+      border-color: var(--fg-dim);
+      color: var(--fg-dim);
+    }
+    .contact-btn.gh:hover {
+      background: var(--fg-dim);
+      color: var(--bg);
+    }
+    .contact-btn-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--fg-dim);
+      margin-top: -0.25rem;
+    }
+    .vcard-btn {
+      display: block;
+      text-align: center;
+      padding: 1rem;
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.2s;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+    .vcard-btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: var(--fg-dim);
+      font-size: 0.8rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    @media (max-width: 640px) {
+      .contact-page { padding: 8rem 0 2rem; }
+      .contact-card { padding: 1.5rem; }
+      .contact-name { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <img src="/punksystems_white.svg" alt="Punk Systems" class="nav-icon">
+      <span class="nav-logo-text">
+        <span class="logo-word">
+          <span class="logo-letter">P</span>
+          <span class="logo-letter">u</span>
+          <span class="logo-letter">n</span>
+          <span class="logo-letter">k</span>
+        </span>
+        <span class="logo-word">
+          <span class="logo-letter">S</span>
+          <span class="logo-letter">y</span>
+          <span class="logo-letter">s</span>
+          <span class="logo-letter">t</span>
+          <span class="logo-letter">e</span>
+          <span class="logo-letter">m</span>
+          <span class="logo-letter">s</span>
+        </span>
+      </span>
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <main>
+      <section class="section contact-page">
+        <div class="container">
+          <div class="contact-card">
+            <h1 class="contact-name">Rudi Yardley</h1>
+            <div class="contact-title">Software Engineer & Web3 Lead</div>
+
+            <p class="contact-bio">
+              A software engineer with over a quarter century experience in the industry.
+              Since 2018 he has been working predominantly in the web3 space leading teams
+              shipping both protocols and web3 solutions to mainnet.
+            </p>
+
+            <div class="contact-section-title">Contact</div>
+            <div class="contact-buttons">
+              <a href="https://signal.me/#eu/HPdISnPQnJ8hx-4rV7cqywFH0Gf7aUmEIUJuvngHWYagTVW4Xu5DQIZYNonjeycW" class="contact-btn signal"><i class="fas fa-comment"></i> signal</a>
+              <a href="https://discord.com/users/1223889676574789685" class="contact-btn discord"><i class="fab fa-discord"></i> discord</a>
+              <a href="https://x.com/rudiyardley" class="contact-btn x"><i class="fab fa-x-twitter"></i> x.com</a>
+              <a href="https://github.com/ryardley" class="contact-btn gh"><i class="fab fa-github"></i> github</a>
+              <div class="contact-btn-note">Telegram: Just contact me on Signal</div>
+            </div>
+
+            <div class="contact-section-title">Notable Projects</div>
+            <ul class="project-list">
+              <li class="project-item">
+                <div class="project-name">The Punk Report</div>
+                <div class="project-desc">Zero-knowledge news. Privacy and technology news without tracking or data collection.</div>
+                <a href="https://punkreport.sh" class="project-link">punkreport.sh →</a>
+              </li>
+              <li class="project-item">
+                <div class="project-name">The Interfold</div>
+                <div class="project-desc">A distributed network for confidential coordination using FHE, ZKPs, and MPC. Enables independent parties to produce shared, verifiable outcomes from private inputs.</div>
+                <a href="https://www.theinterfold.com/" class="project-link">theinterfold.com →</a>
+              </li>
+              <li class="project-item">
+                <div class="project-name">Roman Kyoto</div>
+                <div class="project-desc">Multi Asset Shielded Pool (MASP) for private ERC-20 transfers. ETHGlobal Sydney Finalist.</div>
+                <a href="https://ethglobal.com/showcase/roman-kyoto-s3uio" class="project-link">ethglobal.com/showcase →</a>
+              </li>
+              <li class="project-item">
+                <div class="project-name">Thorchain</div>
+                <div class="project-desc">Decentralized cross-chain liquidity protocol enabling native asset swaps without wrapped tokens.</div>
+                <a href="https://thorchain.org/" class="project-link">thorchain.org →</a>
+              </li>
+              <li class="project-item">
+                <div class="project-name">Blitz</div>
+                <div class="project-desc">The Missing Fullstack Toolkit for Next.js — a fullstack JavaScript/TypeScript framework.</div>
+                <a href="https://github.com/blitz-js/blitz" class="project-link">github.com/blitz-js/blitz →</a>
+              </li>
+            </ul>
+
+            <a href="{{ get_url(path='rudi_yardley.vcf') }}" class="vcard-btn" download>Download vCard →</a>
+            <a href="/" class="back-link">&larr; Back to Punk Systems</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Punk Systems. No tracking. No data collection.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
